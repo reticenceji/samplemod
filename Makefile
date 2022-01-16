@@ -1,5 +1,9 @@
 init:
 	pip install -r requirements.txt
 
-test:
-	nosetests tests
+doc:
+	pdoc --html src -o doc/
+
+test: src
+	pytest src/*
+	pytest test
